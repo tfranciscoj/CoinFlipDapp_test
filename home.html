@@ -82,7 +82,7 @@ if(typeof(Contracts)==="undefined") var Contracts={};
 
     function flip(){
         let val=parseInt($("#bet").val());
-        let accounts=web3.eth.accounts;
+        
         instance.flip.sendTransaction({from: accounts[0], gas: 100000, value: val },
         function(error, txHash){
             if(error){
