@@ -68,6 +68,7 @@ if(typeof(Contracts)==="undefined") var Contracts={};
 
 
     function getResult(){
+        let accounts=web3.eth.accounts;
         instance.getLastFlip(accounts[0],function(error, result){
             if(result){
                 $('#result').html("You won!");
